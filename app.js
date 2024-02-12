@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/admin",studentRouter)
+app.use("/api/student",studentRouter)
 //app.use("/api/student",)
 
 mongoose.connect("mongodb+srv://meenumj:meenumj167@cluster0.uobnjw6.mongodb.net/collegeDb?retryWrites=true&w=majority",
