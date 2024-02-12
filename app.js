@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const studentRouter = require("./Controllers/StudentRouter")
+const markRouter=require("./Controllers/markRouter")
 
 const app = express()
 
@@ -9,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/api/student",studentRouter)
-//app.use("/api/student",)
+app.use("/api/mark",markRouter)
 
 mongoose.connect("mongodb+srv://meenumj:meenumj167@cluster0.uobnjw6.mongodb.net/collegeDb?retryWrites=true&w=majority",
  {useNewUrlParser:true})
