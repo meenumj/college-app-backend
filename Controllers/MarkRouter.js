@@ -17,7 +17,7 @@ router.post("/addmark",async(req,res)=>{
 
 router.get("/viewmark",async(req,res)=>{
     let result=await markModel.find()
-    .populate("UserID","Name Email -_id")
+    .populate("UserID","Name Email Rollno Admno College Parent -_id")
     .exec()
     res.json(result)
 })
